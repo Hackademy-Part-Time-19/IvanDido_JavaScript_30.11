@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; display: flex; justify-content: center; align-items: center;">
+    <div style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <img id="immagine" style="height: 500px; width: 800px; transition: 1s opacity;" src="https://image-cdn.hypb.st/https%3A%2F%2Fuk.hypebeast.com%2Ffiles%2F2023%2F12%2Fadidas-predator-football-boot-30-year-anniversary-official-images-5.jpg?cbr=1&q=90">  
+    </div>
+    
+    <script>
+        
+        let indiceImmagine = 2;
+        
+        setInterval(() => {
+            
+            if(indiceImmagine==1){     
+                document.getElementById("immagine").style.opacity = "0";
+                
+                setTimeout(() => {
+                    document.getElementById("immagine").src = "https://image-cdn.hypb.st/https%3A%2F%2Fuk.hypebeast.com%2Ffiles%2F2023%2F12%2Fadidas-predator-football-boot-30-year-anniversary-official-images-5.jpg?cbr=1&q=90";
+                    document.getElementById("immagine").style.opacity = "1";    
+                }, 500); 
+                
+                indiceImmagine++; 
+            } else if(indiceImmagine==2){     
+                document.getElementById("immagine").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("immagine").src = "https://i0.wp.com/www.soccercleats101.com/wp-content/uploads/2023/02/Jude-Bellingham-wears-adidas-Predator-Accuracy.jpg?fit=1200%2C938&ssl=1";
+                    document.getElementById("immagine").style.opacity = "1" ;    
+                }, 500); 
+                indiceImmagine++; 
+
+            } else if(indiceImmagine==3){     
+                    document.getElementById("immagine").style.opacity = "0";
+                    setTimeout(() => {
+                        document.getElementById("immagine").src = "https://pegasusfootball.com/cdn/shop/articles/gettyimages-1813250867-612x612.jpg?v=1700934415";
+                        document.getElementById("immagine").style.opacity = "1";   
+                    }, 500); 
+                    indiceImmagine=1; }
+                    
+                }, 5000);
+                
+            </script>
+            
+        </body>
+        </html>

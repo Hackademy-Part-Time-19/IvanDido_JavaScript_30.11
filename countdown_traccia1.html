@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            ;
+        }
+    </style>
+
+</head>
+<body style=" background-color: black; display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh; flex-direction: column;">
+    <button id="bottone" onclick="Timer()" style="width: 70px; height: 40px; font-size: 20px;">Avvio</button>
+    <h1 id="Countdown" style="color: white; font-size: 150px; font-weight: bold;"></h1>
+    <div id="contenitoreImmagine" style="width: auto; height: auto; display: none;"> <img id="immagine" src="https://www.lunediacolazione.it/wp-content/uploads/2023/05/new-york-insolita-2.jpg" style="object-fit: contain; transition: 1s opacity;"> </div> 
+    
+    
+    <script>
+        
+        let countdown = 5;
+        let intervallo;
+
+        function Timer(){
+            
+            document.getElementById("Countdown").innerHTML = countdown;
+
+            intervallo = setInterval(function(){
+                countdown--;
+                document.getElementById("Countdown").innerHTML = countdown;
+
+                if (countdown == 0) {
+                    
+                    document.getElementById("Countdown").style.display = "none";
+                    document.getElementById("bottone").style.display = "none";
+                    document.getElementById("contenitoreImmagine").style.display = "block";
+                    document.getElementById("immagine").style.opacity = "0";
+
+                    setTimeout(() => {
+                        document.getElementById("immagine").style.opacity = "1";
+                    }, 500);
+                    
+
+
+                }
+
+            },1000);
+   
+        }
+
+
+        
+    </script>
+    
+</body>
+</html>
